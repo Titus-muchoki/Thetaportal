@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BsChevronBarDown, BsFillArrowLeftSquareFill, BsSearch } from "react-icons/bs";
 import { AiFillEnvironment } from "react-icons/ai";
 import { RiDashboardFill } from "react-icons/ri";
+import Ktda from "./assets/KTDA-MS.webp"
 
 
 
@@ -35,9 +36,11 @@ const App = () => {
           onClick={() => setOpen(!open)} />
 
         <div className='inline-flex'>
-          <AiFillEnvironment className={`bg-amber-300 text-4xl rounded cursor-pointer block float-left mr-2 duration-500
+          <img src={Ktda} alt="/" className={`text-4xl w-20 h-25 rounded cursor-pointer bg-green-300 float-left mr-2 duration-500
         ${open && "rotate-[360deg]"}`} />
-          <h1 className={`text-white origin-left font-medium text-2xl duration-300 ${!open && "scale-0"}`}>Tailwind</h1>
+          <h1 className={`text-white origin-left font-medium text-2xl duration-300 ${!open && "scale-0"}`}>
+            <span className='font-semi-bold'>Farmers portal</span>
+          </h1>
         </div>
 
         <div className={`flex items-center rounded-md bg-slate-950 mt-6 ${!open ? "px-2.5" : "px-4"}`}>
