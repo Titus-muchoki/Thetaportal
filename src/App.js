@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { BsChevronBarDown, BsFillArrowLeftSquareFill, BsSearch } from "react-icons/bs";
-import { AiFillEnvironment } from "react-icons/ai";
-import { RiDashboardFill } from "react-icons/ri";
+import { BsChevronBarDown, BsFillArrowLeftSquareFill, BsSearch, BsCalendarCheckFill,
+   BsBagCheckFill, BsStickiesFill, BsCreditCard2FrontFill } from "react-icons/bs";
+import { RiDashboardFill, RiBox3Fill,RiUserAddFill } from "react-icons/ri";
+import { AiFillSetting, AiOutlineLogout } from "react-icons/ai";
+
 import Ktda from "./assets/KTDA-MS.webp"
+
 
 
 
@@ -10,11 +13,11 @@ const App = () => {
   const [open, setOpen] = useState(true)
   const [submenuOpen, setSubmenuOpen] = useState(false);
   const Menus  = [
-    {title: "Dashboard"},
-    {title: "Pages"},
-    {title: "Media", spacing: true},
+    {title: "Tea-Weights", icon: <BsCalendarCheckFill />},
+    {title: "Fertilizers", icon: <BsBagCheckFill />},
+    {title: "Credit & finance", icon: <BsCreditCard2FrontFill />,  spacing: true},
     {
-      title: "Projects",
+      title: "Trainings", icon: <BsStickiesFill />,
       submenu: true,
       submenuItems: [
         {title: "Submenu 1"},
@@ -22,15 +25,15 @@ const App = () => {
         {title: "Submenu 1"},
       ],
     },
-    {title: "Analytics"},
-    {title: "Inbox"},
-    {title: "Profile", spacing: true},
-    {title: "Setting"},
-    {title: "Logout"}
+    // {title: "Analytics"},
+    {title: "Inbox", icon: <RiBox3Fill />},
+    {title: "Profile", icon: <RiUserAddFill />, spacing: true},
+    {title: "Setting", icon: <AiFillSetting />},
+    {title: "Logout", icon: <AiOutlineLogout />}
   ];
   return (
     <div className="flex">
-      <div className={`h-screen bg-slate-500 p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300  relative`}>
+      <div className={` bg-slate-500 p-5 pt-8 ${open ? "w-72" : "w-20"} duration-300  relative`}>
         <BsFillArrowLeftSquareFill className={`bg-white text-dark-purple text-3xl rounded-full 
         absolute -right-3 top-9 border border-slate-500 cursor-pointer ${!open && "rotate-180"}`}
           onClick={() => setOpen(!open)} />
