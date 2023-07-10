@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Fa from "../assets/Kenyan-Tea-Plantations.jpg"
 import { IoBarChart } from "react-icons/io5"
 import Ktda from "../assets/KTDA-MS.webp"
+import Navbar from './Navbar';
 
 const Home = () => {
     const [Teaweight, setTeaWeight] = useState([]);
@@ -18,15 +19,23 @@ const Home = () => {
                 </div>
                 <div className='py-10 grid md:grid-cols-2'>
                     <IoBarChart />
-                    <button className='font-bold bg-emerald-500 w-20 rounded-md'>Tea</button>
+                    <button className='font-bold bg-emerald-500 w-20 rounded-md'>
+                        <select name="" id="">
+                            <option value="year">2023</option>
+                            <option value="year">2022</option>
+                            <option value="year">2021</option>
+                            <option value="year">2020</option>
+                            <option value="year">2019</option>
+                            <option value="year">2018</option>
+                            <option value="year">2017</option>
+                        </select>
+                    </button>
                 </div>
-
+            
             </div>
-            <div className=''>
-
+            <div className=' flex flex-col'>
+            <Navbar />
             </div>
-
-
         </div>
     );
 };

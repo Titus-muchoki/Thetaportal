@@ -8,7 +8,7 @@ const Navbar = () => {
         setNav(!nav);
     }
     return (
-        <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-5 text-white '>
+        <div className='flex flex-col justify-citems-center h-24 max-w-[1240px] mx-auto px-5 text-white '>
             <h1 className='w-full text-3xl font-bold text-[#00df9a] '>Theta.</h1>
             <ul className='hidden md:flex'>
                 <li className='p-4'>About</li>
