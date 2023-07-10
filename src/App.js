@@ -55,12 +55,12 @@ const App = () => {
               <span className={`text-base font-medium flex-1 duration-200 ${!open && "hidden"}`}>
                 {menu.title}
                 </span>
-                {menu.submenu && (
+                {menu.submenu && open && (
                   <BsChevronBarDown className={`${submenuOpen && "rotate-180"}`}  onClick={() =>
                      setSubmenuOpen(!submenuOpen)}/>
                 )}
             </li>
-            {menu.submenu && submenuOpen &&(
+            {menu.submenu && submenuOpen && open &&(
               <ul>
                 {menu.submenuItems.map((submenuItem, index) => (
                   <li key={index} className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 px
