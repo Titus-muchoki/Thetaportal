@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BsFillArrowLeftSquareFill, BsSearch } from "react-icons/bs";
+import { BsChevronBarDown, BsFillArrowLeftSquareFill, BsSearch } from "react-icons/bs";
 import { AiFillEnvironment } from "react-icons/ai";
 import { RiDashboardFill } from "react-icons/ri";
 
@@ -46,14 +46,28 @@ const App = () => {
         <ul className='pt-2'>
           {Menus.map((menu, index) => (
             <>
-            <li key={index} className='text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 hover:bg-slate-400 rounded-md mt-2'>
+            <li key={index} className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2
+             hover:bg-slate-400 rounded-md ${menu.spacing ? "mt-9" : "mt-2"}`}>
              <span className='text-2xl block float-left'>
               <RiDashboardFill />
              </span>
               <span className={`text-base font-medium flex-1 duration-200 ${!open && "hidden"}`}>
                 {menu.title}
                 </span>
+                {menu.submenu && (
+                  <BsChevronBarDown className=""  onClick={() => {}}/>
+                )}
             </li>
+            {menu.submenu && (
+              <ul>
+                {menu.submenuItems.map((submenuItem, index) => (
+                  <li key={index} className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 px-5
+                  hover:bg-slate-400 rounded-md ${menu.spacing ? "mt-9" : "mt-2"}`}>
+                    {submenuItem.title}
+                  </li>
+                ))}
+              </ul>
+            )}
             </>
           ))}
         </ul>
