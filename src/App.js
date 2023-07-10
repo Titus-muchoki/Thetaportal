@@ -7,6 +7,7 @@ import { RiDashboardFill } from "react-icons/ri";
 
 const App = () => {
   const [open, setOpen] = useState(true)
+  const [submenuOpen, setSubmenuOpen] = useState(false);
   const Menus  = [
     {title: "Dashboard"},
     {title: "Pages"},
@@ -55,13 +56,14 @@ const App = () => {
                 {menu.title}
                 </span>
                 {menu.submenu && (
-                  <BsChevronBarDown className=""  onClick={() => {}}/>
+                  <BsChevronBarDown className={`${submenuOpen && "rotate-180"}`}  onClick={() =>
+                     setSubmenuOpen(!submenuOpen)}/>
                 )}
             </li>
-            {menu.submenu && (
+            {menu.submenu && submenuOpen &&(
               <ul>
                 {menu.submenuItems.map((submenuItem, index) => (
-                  <li key={index} className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 px-5
+                  <li key={index} className={`text-gray-300 text-sm flex items-center gap-x-4 cursor-pointer p-2 px
                   hover:bg-slate-400 rounded-md ${menu.spacing ? "mt-9" : "mt-2"}`}>
                     {submenuItem.title}
                   </li>
@@ -77,4 +79,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default App; 
