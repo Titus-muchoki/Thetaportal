@@ -19,6 +19,7 @@ const Teaweights = () => {
   
     return (
       <div>
+        hello there
         <table className='table'>
           <thead>
             <tr>

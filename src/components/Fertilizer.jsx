@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Sidebar = () => {
+const Fertilizer = () => {
     return (
         <div>
-            ncck
+            Fertilizer
         </div>
     );
 };
 
-export default Sidebar;
+export default Fertilizer;
