@@ -28,7 +28,7 @@ const Teaweights = () => {
         <th className="py-3 px-4">Monthly Net</th>
         <th className="py-3 px-4">Year</th>
         <th className="py-3 px-4">Date</th>
-        <th className="py-3 px-4">Farmer ID</th>
+        {/* <th className="py-3 px-4">Farmer ID</th> */}
       </tr>
     </thead>
     <tbody className="bg-white divide-y divide-gray-200">
@@ -39,7 +39,7 @@ const Teaweights = () => {
           <td className="py-3 px-4">{item.monthlyNet}</td>
           <td className="py-3 px-4">{item.year}</td>
           <td className="py-3 px-4">{item.date}</td>
-          <td className="py-3 px-4">{item.farmerId}</td>
+          {/* <td className="py-3 px-4">{item.farmerId}</td> */}
         </tr>
       ))}
     </tbody>

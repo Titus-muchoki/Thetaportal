@@ -44,7 +44,7 @@ const Navbar = () => {
     // }
     return (
         <div className="flex" >
-            <div className={` bg-purple-950 p-5 pt-8 h-screen ${open ? "w-72" : "w-20"} duration-300  relative`}>
+            <div className={` bg-lime-800 p-5 pt-8 h-screen ${open ? "w-72" : "w-20"} duration-300  relative`}>
                 <BsFillArrowLeftSquareFill className={`bg-white text-dark-purple text-3xl rounded-full 
         absolute -right-3 top-9 border border-slate-500 cursor-pointer ${!open && "rotate-180"}`}
                     onClick={() => setOpen(!open)} />
