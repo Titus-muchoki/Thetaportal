@@ -24,7 +24,7 @@ const Teaweights = () => {
   );
 
   return (
-    <div className="px-20">
+    <div className="px-20 py-6">
       <div className="mb-4">
         <label htmlFor="filterDateInput" className="mr-2">
           Filter by Date:
