@@ -18,10 +18,11 @@ const Navbar = () => {
     const navigate = useNavigate();
     const [open, setOpen] = useState(true)
     const [submenuOpen, setSubmenuOpen] = useState(false);
+    
     const Menus = [
         { title: "Tea-Weights", icon: <BsCalendarCheckFill />, link: "/" },
         { title: "Fertilizers", icon: <BsBagCheckFill />, link: "/fertilizer" },
-        { title: "Credit & finance", icon: <BsCreditCard2FrontFill />, spacing: true },
+        { title: "Credit & finance", icon: <BsCreditCard2FrontFill />, spacing: true, link: "/finance" },
         {
             title: "Trainings", icon: <BsStickiesFill />,
             submenu: true,
